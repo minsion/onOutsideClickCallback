@@ -1,0 +1,131 @@
+/* Wrapping */
+.tooltip-wrapper {
+  position: relative;
+  li{
+    height: 40px;
+    list-style: none;
+    padding: 5px;
+    border-bottom: 1px solid #f2f2f2;
+    cursor: pointer;
+    line-height: 50px;
+    .fa-cube{
+      margin-right: 10px;
+    }
+    .fa-caret-left, .fa-caret-right{
+      float: right;
+      margin-top: 15px;
+    }
+  }
+  li:hover{
+    color: #536DFE;
+  }
+  .tooltip {
+    position: absolute;
+    border-radius: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+    color: #7c8082;
+    background: #fff;
+    font-size: 14px;
+    font-family: sans-serif;
+    line-height: 1;
+    z-index: 100;
+    white-space: nowrap;
+    .tip-content{
+      margin: 0 5px;
+    }
+  }
+  
+  .tooltip::before {
+    content: " ";
+    left: 50%;
+    border: solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-width: 10px;
+    margin-left: calc(10px * -1);
+  }
+  .tooltip.right {
+    left: calc(100% + 30px);
+    top: 50%;
+    transform: translateX(0) translateY(-50%);
+    border: 1px solid #fff
+  }
+  .tooltip.right::before {
+    left: calc(10px * -1);
+    top: 50%;
+    transform: translateX(0) translateY(-50%);
+    border-right-color: #fff;
+  }
+}
+.wrapper-enterprise-model{
+  .MuiDialog-paperWidthSm{
+    max-width: 900px;
+    width: 900px;
+    .MuiDialogTitle-root{
+      display: none;
+    }
+    .MuiDialogContent-root{
+      padding: 0;
+      .wrapper-head{
+        padding: 10px 15px;
+        margin-bottom: 10px;
+        background-color: #ebebeb;
+        .title{
+          display: inline-block;
+          font-size: 18px;
+          font-weight: 600;
+        }
+        i{
+          float: right;
+        }
+      }
+      .sub-title{
+        display: inline-block;
+        font-weight: 500;
+        padding: 8px 0 8px 15px;
+      }
+      .print-btn{
+        float: right;
+        box-shadow: none;
+        margin-right: 10px;
+        i{
+          margin-right: 5px;
+        }
+      }
+      .content{
+        padding: 8px 15px;
+      }
+    }
+  }
+}
+.printRepair{
+  padding: 0;
+  .wrapper-head{
+    padding: 10px 15px;
+    margin: -8px -8px 10px -8px;
+    background-color: #ebebeb;
+    .title{
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    i{
+      display: none;
+    }
+  }
+  .sub-title{
+    display: inline-block;
+    font-weight: 500;
+    padding: 8px 0 8px 15px;
+  }
+  .print-btn{
+    display: none;
+  }
+  .content{
+    padding: 8px 15px;
+  }
+}
